@@ -39,3 +39,25 @@ def two_sum_two_hash(nums, target):
         if complement in nums_hash and nums_hash[complement] != i:
             return [i, nums_hash[complement]]
 
+
+def two_sum_one_hash(nums, target):
+    """
+    Given an array of integers, return indices of the two numbers such that they add up to target.
+    Involves only a single pass with hashmap.
+    Fastest solution.
+    O(n) time complexity.
+    O(n) space complexity.
+    :param nums: Array of integers.
+    :param target: Target number.
+    :return: Indices of the two numbers such that they add up to target.
+    """
+    length = len(nums)
+    nums_hash = {}
+
+    for i in range(length):
+        # check if complement exists yet in hashmap
+        complement = target - nums[i]
+        if complement in nums_hash and nums_hash[complement] != i:
+            return [i, nums_hash[complement]]
+
+        nums_hash[nums[i]] = i
