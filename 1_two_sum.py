@@ -4,6 +4,8 @@ def two_sum_naive(nums, target):
     """
     Given an array of integers, return indices of the two numbers such that they add up to target.
     Naive solution to two-sum problem, involving nested for loops.
+    O(n^2) time complexity.
+    O(1) space complexity.
     :param nums: Array of integers.
     :param target: Target number.
     :return: Indices of the two numbers such that they add up to target.
