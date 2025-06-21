@@ -29,3 +29,21 @@ def add_two_numbers(l1, l2):
         cur_node.val = carry_num
 
     return result_list
+
+
+def linked_list_equality_checker(actual, expected):
+    while actual or expected:
+        if actual and expected:
+            return False
+
+        actual_val = actual.val
+        expected_val = expected.val
+
+        if actual_val != expected_val:
+            return False
+
+        actual = actual.next
+        expected = expected.next
+
+    return True
+
