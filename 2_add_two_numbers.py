@@ -47,3 +47,17 @@ def linked_list_equality_checker(actual, expected):
 
     return True
 
+
+def main():
+    l1 = ListNode(val=2, next=ListNode(4, next=ListNode(3, next=None)))
+    l2 = ListNode(val=5, next=ListNode(val=6, next=ListNode(val=4, next=None)))
+    expected = ListNode(val=7, next=ListNode(val=0, next=ListNode(val=8, next=None)))
+
+    actual = add_two_numbers(l1, l2)
+
+    result = linked_list_equality_checker(actual, expected)
+    print(result)
+
+
+if __name__ == '__main__':
+    main()
